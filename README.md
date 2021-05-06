@@ -17,3 +17,9 @@ optionally for fresh start
 ```
 docker-compose down --rmi all
 ```
+
+if there are `<none>` (dangling) images
+
+```
+docker image prune
+```
