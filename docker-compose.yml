@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+  app:
+    image: 01-sample
+    build: .
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+    ports:
+      - '4000:3000'
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
